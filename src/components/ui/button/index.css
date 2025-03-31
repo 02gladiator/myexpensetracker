@@ -1,0 +1,131 @@
+.myBtn {
+    position: relative;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+    outline: none;
+    overflow: hidden;
+}
+
+/* Variants */
+.contained {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contained:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px);
+}
+
+.contained:active {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+}
+
+.outlined {
+    background: transparent;
+    border: 2px solid currentColor;
+}
+
+.text {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+/* Colors */
+.primary {
+    color: white;
+    background-color: #4a90e2;
+}
+
+.primary.outlined, .primary.text {
+    color: #4a90e2;
+    background-color: transparent;
+}
+
+.secondary {
+    color: white;
+    background-color: #6c757d;
+}
+
+.secondary.outlined, .secondary.text {
+    color: #6c757d;
+    background-color: transparent;
+}
+
+.danger {
+    color: white;
+    background-color: #dc3545;
+}
+
+.danger.outlined, .danger.text {
+    color: #dc3545;
+    background-color: transparent;
+}
+
+.success {
+    color: white;
+    background-color: #28a745;
+}
+
+.success.outlined, .success.text {
+    color: #28a745;
+    background-color: transparent;
+}
+
+/* Sizes */
+.small {
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
+.medium {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.large {
+    padding: 14px 28px;
+    font-size: 16px;
+}
+
+/* Full width */
+.myBtn[style*="width:100%"], .fullWidth {
+    width: 100%;
+    display: flex;
+}
+
+/* Disabled state */
+.myBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* Ripple effect (optional) */
+.myBtn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 1%, transparent 1%) center/15000%;
+    opacity: 0;
+    transition: opacity 0.5s, background-size 0.5s;
+}
+
+.myBtn:active::after {
+    background-size: 100%;
+    opacity: 1;
+    transition: background-size 0s;
+}

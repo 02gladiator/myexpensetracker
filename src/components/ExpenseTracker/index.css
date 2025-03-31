@@ -1,0 +1,128 @@
+.expense-tracker-container {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+.form-section {
+    flex: 1;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+}
+
+.content-section {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.chart-section {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.statistics-section {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.expenses-section {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.expenses-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.sort-select {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    min-width: 180px;
+}
+
+.expenses-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.total-amount {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #555;
+}
+
+.total-amount span {
+    font-weight: bold;
+    color: #4a90e2;
+}
+
+h2 {
+    color: #333;
+    margin: 0 0 20px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .expense-tracker-container {
+        flex-direction: column;
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .expenses-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .total-amount {
+        align-self: flex-end;
+    }
+}
+
+.sticky-form {
+    position: sticky;
+    top: 20px;
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .sticky-form {
+        position: static;
+        top: auto;
+        margin-bottom: 20px;
+    }
+
+    .expense-tracker-container {
+        flex-direction: column;
+    }
+}
+
+.sticky-form.scrolled {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+}
