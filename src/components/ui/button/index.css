@@ -14,7 +14,6 @@
     overflow: hidden;
 }
 
-/* Variants */
 .contained {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -40,7 +39,6 @@
     box-shadow: none;
 }
 
-/* Colors */
 .primary {
     color: white;
     background-color: #4a90e2;
@@ -81,7 +79,6 @@
     background-color: transparent;
 }
 
-/* Sizes */
 .small {
     padding: 6px 12px;
     font-size: 12px;
@@ -97,13 +94,11 @@
     font-size: 16px;
 }
 
-/* Full width */
 .myBtn[style*="width:100%"], .fullWidth {
     width: 100%;
     display: flex;
 }
 
-/* Disabled state */
 .myBtn:disabled {
     opacity: 0.6;
     cursor: not-allowed;
@@ -111,7 +106,6 @@
     box-shadow: none !important;
 }
 
-/* Ripple effect (optional) */
 .myBtn::after {
     content: '';
     position: absolute;

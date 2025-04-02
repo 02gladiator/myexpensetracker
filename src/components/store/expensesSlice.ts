@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { IExpense } from '../../components/Expense/index.interface';
+import { IExpense } from '../Expense/index.interface.ts';
 
 interface ExpensesState {
     expenses: IExpense[];
@@ -13,7 +13,7 @@ const initialState: ExpensesState = {
         { id: 3, name: "Кино", price: 1200, category: "Развлечения", date: "2023-03-20" },
         { id: 4, name: "Аренда", price: 25000, category: "Жилье", date: "2023-03-01" },
     ],
-    total: 32200, // Сумма начальных расходов
+    total: 32200,
 };
 
 const expensesSlice = createSlice({
